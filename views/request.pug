@@ -52,8 +52,8 @@ block content
 							td {{request.requestedDate | date:'short'}}
 							td {{request.dateClosed | date:'short'}}
 							td
-								form(editable-form, name='rowform', ng-show='rowform.$visible', onbeforesave="saveRequest($data, request._id)")
-									button(type='submit', ng-disabled='rowform.$waiting', class='btn btn-success') Save
-									button(type='button', ng-disabled='rowform.$waiting', ng-click='rowform.$cancel()', class='btn btn-danger') Cancel
-								button(class='btn btn-default', ng-show='!rowform.$visible', data-ng-click='rowform.$show()') Edit
-								button(class='btn btn-danger', ng-show='!rowform.$visible', data-confirm-click='Are you sure you want to delete {{request.name}}?' data-confirmed-click='deleteRequest(request)') Delete
+								form(editable-form, name='rowform', data-ng-show='rowform.$visible', onbeforesave="saveRequest($data, request._id)")
+									button(type='submit', data-ng-disabled='rowform.$waiting', class='btn btn-success') Save
+									button(type='button', data-ng-disabled='rowform.$waiting', data-ng-click='rowform.$cancel()', class='btn btn-danger') Cancel
+								button(class='btn btn-default', data-ng-show='!rowform.$visible', data-ng-click='rowform.$show()') Edit
+								button(class='btn btn-danger', data-ng-show='!rowform.$visible', data-confirm-click='Are you sure you want to delete {{request.name}}?' data-confirmed-click='deleteRequest(request)') Delete
