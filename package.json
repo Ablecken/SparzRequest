@@ -1,0 +1,33 @@
+{
+  "name": "sparzrequest",
+  "version": "0.1.0",
+  "license": "",
+  "scripts": {
+    "compile": "browserify -t browserify-css ./public/javascripts/src/angular-app.js -o ./public/javascripts/app.comp.js",
+    "start": "npm run compile && node ./bin/www"
+  },
+  "private": true,
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-cookies": "^1.6.3",
+    "angular-resource": "^1.6.3",
+    "angular-xeditable": "^0.6.0",
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "cookie-session": "^2.0.0-beta.1",
+    "debug": "^2.6.3",
+    "express": "~4.14.1",
+    "express-mailer": "^0.3.1",
+    "mongoose": "^4.9.1",
+    "morgan": "~1.7.0",
+    "pug": "^2.0.0-beta9",
+    "request": "^2.81.0",
+    "serve-favicon": "~2.3.2"
+  },
+  "devDependencies": {
+    "browserify": "^14.0.0",
+    "browserify-css": "^0.10.0",
+    "errorhandler": "^1.5.0",
+    "nodemon": "^1.11.0"
+  }
+}

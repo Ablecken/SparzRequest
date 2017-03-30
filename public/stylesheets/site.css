@@ -1,0 +1,30 @@
+@import "node_modules/angular-xeditable/dist/css/xeditable.css";
+
+html, body {
+	height: 100%;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#wrap {
+	overflow: auto;
+	padding-bottom: 150px;
+}
+
+.footer {
+	position: relative;
+	margin-top: -150px; /* negative value of footer height */
+	height: 150px;
+	clear: both;
+	padding-top: 20px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 150px; /* same as footer height */
+}

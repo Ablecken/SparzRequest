@@ -1,0 +1,59 @@
+extends layout
+
+block content
+	div(class='view', data-ng-controller='requestController')
+		div
+			fieldset
+				legend Request:
+				div(class='row')
+					div(class='col-sm-12 col-md-6 col-lg-3 form-group')
+						label Movie/Show Name
+						input(type='text', class='form-control', data-ng-model='name')
+					div(class='col-sm-12 col-md-6 col-lg-3 form-group')
+						label Type
+						input(type='text', class='form-control', data-ng-model='requestType')
+					div(class='col-sm-12 col-md-6 col-lg-3 form-group')
+						label Year
+						input(type='text', class='form-control', data-ng-model='year')
+					div(class='col-sm-12 col-md-6 col-lg-3 form-group')
+						label Ongoing TV Show
+						input(type='checkbox', class='form-control', data-ng-model='isOngoing')
+						small This means that it is currently has or will have upcoming episodes
+				div(class='row')
+					div(class='col-sm-12 form-group')
+						button(class='btn btn-success', data-ng-click='createRequest()') Add
+						button(class='btn btn-success', data-ng-click='clearRequest()') Clear
+		hr
+		div
+			table(class='table table-bordered table-responsive table-striped table-condensed')
+				thead
+					tr
+						th Name (Year)
+						th Type
+						th IsOngoing
+						th Status
+						th Date Requested
+						th Date Filled
+						th Actions
+					thead
+					tbody
+						tr(data-ng-cloak, data-ng-repeat='request in requests')
+							td
+								span(e-form='rowform', editable-text='request.name', e-name='name') {{request.name || 'empty'}}
+								|&nbsp;(
+								span(e-form='rowform', editable-number='request.year', e-name='year', e-style='width: 85px;') {{request.year || 'empty'}}
+								|)
+							td 
+								span(e-form='rowform', editable-select='request.requestType', e-ng-options='s.value as s.text for s in requestTypes', e-name='requestType') {{request.requestType || 'Movie'}}
+							td 
+								span(e-form='rowform', editable-checkbox='request.isOngoing', e-name='isOngoing', e-title='Is Ongoing') {{request.isOngoing && 'Yes' || 'No'}}
+							td
+								span(e-form='rowform', editable-select='request.statusType', e-ng-options='s.value as s.text for s in statusTypes', e-name='statusType') {{request.statusType || 'Requested'}}
+							td {{request.requestedDate | date:'short'}}
+							td {{request.dateClosed | date:'short'}}
+							td
+								form(editable-form, name='rowform', ng-show='rowform.$visible', onbeforesave="saveRequest($data, request._id)")
+									button(type='submit', ng-disabled='rowform.$waiting', class='btn btn-success') Save
+									button(type='button', ng-disabled='rowform.$waiting', ng-click='rowform.$cancel()', class='btn btn-danger') Cancel
+								button(class='btn btn-default', ng-show='!rowform.$visible', data-ng-click='rowform.$show()') Edit
+								button(class='btn btn-danger', ng-show='!rowform.$visible', data-confirm-click='Are you sure you want to delete {{request.name}}?' data-confirmed-click='deleteRequest(request)') Delete

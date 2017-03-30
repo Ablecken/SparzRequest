@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	div(class='login-form', data-ng-controller='loginController')
+		div(data-ng-if='hasError', class='error col-sm-12 col-md-6 col-md-offset-3') Unable to login at this time
+		div(class='col-sm-12 col-md-6 col-md-offset-3')
+			fieldset(class='form-group')
+				legend Plex.tv Username
+				input(type='text', data-ng-model='userName', placeholder='Plex.tv UserName', title='Please enter your plex.tv username', class='form-control')
+			fieldset(class='form-group')
+				legend Password
+				input(type='password', data-ng-model='password', placeholder='Plex.tv Password', title='Please enter your plex.tv Password', class='form-control')
+			div(class='login-form-button form-group')
+				button.btn(data-ng-click='login()', data-ng-disabled='!userName || !password', class='btn btn-success pull-right', title="login") Log In

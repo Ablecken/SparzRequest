@@ -1,0 +1,5 @@
+{
+	"verbose": true,
+	"ignore": ["public/javascripts/app.comp.js"],
+	"ext": "js css"
+}

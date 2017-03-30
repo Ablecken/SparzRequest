@@ -1,0 +1,696 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"statu",
+				"statusType"
+			],
+			[
+				"stat",
+				"statusType"
+			],
+			[
+				"au",
+				"authCookie"
+			],
+			[
+				"emailer",
+				"emailerService"
+			],
+			[
+				"pro",
+				"processError"
+			],
+			[
+				"us",
+				"username"
+			],
+			[
+				"cooki",
+				"cookieName"
+			],
+			[
+				"requs",
+				"requests"
+			],
+			[
+				"req",
+				"requestType"
+			],
+			[
+				"auth",
+				"authHeaderVal"
+			],
+			[
+				"requ",
+				"requestTypes"
+			],
+			[
+				"Dialo",
+				"DialogService"
+			],
+			[
+				"max",
+				"maxSignupError"
+			],
+			[
+				"dateV",
+				"dateViewableEnd"
+			],
+			[
+				"curre",
+				"currentDate"
+			],
+			[
+				"def",
+				"defaultFetchOptions"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"_",
+				"_bonusDeals"
+			],
+			[
+				"update",
+				"updateChoiceBenefits"
+			],
+			[
+				"upda",
+				"updateBonusDeals"
+			],
+			[
+				"in",
+				"inHaloYear"
+			],
+			[
+				"amou",
+				"amountRequired"
+			],
+			[
+				"spendValu",
+				"spendValuePercent"
+			],
+			[
+				"spend",
+				"spendProgressCharts"
+			],
+			[
+				"tota",
+				"totalAmount"
+			],
+			[
+				"spen",
+				"spendThreshold"
+			],
+			[
+				"pla",
+				"platinumInfo"
+			],
+			[
+				"num",
+				"numberOfPurchases"
+			],
+			[
+				"numb",
+				"numberOfPurchasesRequired"
+			],
+			[
+				"hour",
+				"hoursDiff"
+			],
+			[
+				"total",
+				"totalAmountRequired"
+			],
+			[
+				"currn",
+				"currentLevelString"
+			],
+			[
+				"curr",
+				"currentLevelString"
+			],
+			[
+				"silv",
+				"silverInfo"
+			],
+			[
+				"ret",
+				"retVal"
+			],
+			[
+				"bon",
+				"bonus-deals"
+			],
+			[
+				"bonus",
+				"bonus-and-deals"
+			],
+			[
+				"bons",
+				"bonus-and-deals"
+			],
+			[
+				"root",
+				"rootScope"
+			],
+			[
+				"is",
+				"isVip"
+			],
+			[
+				"defau",
+				"defaultUrl"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "routes/apis/requests.js",
+			"settings":
+			{
+				"buffer_size": 2037,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"list ",
+				"Package Control: List Packages"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"mkdir -p ~/Library/Application\\ Support/Sublime\\ Text\\ 2/Packages",
+			"Package Control Razor",
+			"Package Control",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Code/SparzRequest",
+		"/C/Code/SparzRequest/models",
+		"/C/Code/SparzRequest/routes",
+		"/C/Code/SparzRequest/routes/apis",
+		"/C/Code/SparzRequest/services",
+		"/C/Code/SparzRequest/views"
+	],
+	"file_history":
+	[
+		"/C/Code/SparzRequest/infrastructure/emailer.js",
+		"/C/Code/SparzRequest/public/javascripts/src/controllers/login.controller.js",
+		"/C/Code/SparzRequest/public/javascripts/src/controllers/request.controller.js",
+		"/C/Code/SparzRequest/routes/apis/requests.js",
+		"/C/Code/SparzRequest/views/request.pug",
+		"/C/Code/SparzRequest/public/javascripts/src/angular-app.js",
+		"/C/Code/SparzRequest/public/javascripts/src/main.js",
+		"/C/Code/SparzRequest/package.json",
+		"/C/Code/SparzRequest/views/layout.pug",
+		"/C/Code/SparzRequest/public/stylesheets/site.css",
+		"/C/Code/SparzRequest/app.js",
+		"/C/Code/SparzRequest/routes/apis/auth.js",
+		"/C/Code/SparzRequest/public/javascripts/src/services.js",
+		"/C/Code/SparzRequest/views/index.pug",
+		"/C/Code/SparzRequest/services/emailer.service.js",
+		"/C/Code/SparzRequest/routes/apis/email.js",
+		"/C/Code/SparzRequest/views/emails/completeRequest.pug",
+		"/C/Code/SparzRequest/infrastructure/routes.js",
+		"/C/Code/SparzRequest/views/emails/newRequest.pug",
+		"/C/Code/SparzRequest/routes/pages/index.js",
+		"/C/Code/SparzRequest/routes/pages/request.js",
+		"/C/Code/SparzRequest/models/Request.js",
+		"/C/Code/SparzRequest/infrastructure/middleware.js",
+		"/C/Code/SparzRequest/node_modules/cookie-parser/index.js",
+		"/C/Code/SparzRequest/public/javascripts/app.comp.js",
+		"/C/Code/SparzRequest/public/javascripts/src/services/request.service.js",
+		"/C/Code/SparzRequest/public/javascripts/src/services/plex.service.js",
+		"/C/Code/SparzRequest/public/javascripts/src/services/test.service.js",
+		"/C/Code/SparzRequest/public/javascripts/src/services/authentication.service.js",
+		"/C/Code/SparzRequest/routes/apis/authentication.js",
+		"/C/Code/SparzRequest/public/javascripts/src/directives/confirm-click.directive.js",
+		"/C/Code/SparzRequest/nodemon.json",
+		"/C/Code/SparzRequest/public/stylesheets/src/main.css",
+		"/C/Code/SparzRequest/public/stylesheets/style.css",
+		"/C/Code/SparzRequest/infrastructure/database.js",
+		"/C/Code/SparzRequest/infrastructure/errors.js",
+		"/C/Code/SparzRequest/routes.js",
+		"/C/Code/SparzRequest/errors.js",
+		"/C/Code/SparzRequest/database.js",
+		"/C/Code/SparzRequest/public/javascripts/src/controllers/loginController.js",
+		"/C/Code/SparzRequest/enums/statusTypes.js",
+		"/C/Code/SparzRequest/enums/requestTypes.js",
+		"/C/Code/SparzRequest/routes/apis/users.js",
+		"/C/Code/SparzRequest/routes/users.js",
+		"/C/Code/SparzRequest/routes/requests.js",
+		"/C/Code/SparzRequest/schema.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/services/syw-dialog-service.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/controllers/root.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/controllers/home.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/controllers/details.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/services/dialog.service.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/services/vip.service.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/services/api.service.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/controllers/choice-benefits.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/controllers/deals-and-benefits.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/controllers/bonus-deals.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/app.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/index.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/services/resource.service.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipProgress.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_MaxCallout.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/services/analytics.service.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/vip.root.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/services/error.handler.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/controllers/vip-extras.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/controllers/vip-only.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/directives/date-viewable.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/_VipHome.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Vip.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/filters/expiresIn.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/filters/dateExtended.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/filters/lc-linkify.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/css/layout/_content.scss",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_NoVipHeader.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/_VipDetails.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/css/site.scss",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipHomeChoiceBenefits.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/directives/static-flexslider.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Shared/_Layout.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/_Views.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_DealTile.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipExtras.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/Templates/_DealRow.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/directives/deal-row.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/lc/analytics.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/gulpfile.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/scripts.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/package.json",
+		"/C/Code/sears-syw/Sears.Vip.Web/modernizr.json",
+		"/C/Code/sears-syw/Sears.Vip.Web/.npmrc",
+		"/C/Code/sears-syw/Sears.Vip.Web/.babelrc",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipOnly.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vipdialog/index.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/services/viperror.service.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/filters/dealType.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/_VipFullBenefits.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipOffers.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipBonusDeals.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipChoiceBenefits.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/_VipProfile.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/_VipDealsBenefits.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_MessageCenter.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipBenefits.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipHomeBonusDeals.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipHeader.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipPerks.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipLevels.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/progressStates.js",
+		"/C/Users/jgeiger/.eslintrc",
+		"/C/Users/jgeiger/AppData/Roaming/Sublime Text 3/Packages/User/ESLint.sublime-settings",
+		"/C/Users/jgeiger/AppData/Roaming/Sublime Text 3/Packages/ESLint/ESLint.sublime-settings",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipHomeOffers.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_VipHomeExtras.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/node_modules/angular-linkify/angular-linkify.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_BecomeVip.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/lc/angular/providers/analytics.provider.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_ReturnLink.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/lc/angular/directives/analytics.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Shared/_AnalyticsHead.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Shared/_AnalyticsBodyStart.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/directives/disable-button-click.js",
+		"/C/Users/jgeiger/AppData/Roaming/Sublime Text 3/Packages/ESLint-Formatter/ESLint-Formatter.sublime-settings",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_NoVipFooter.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Dialog/Details.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Dialog/Confirm.cshtml",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/dialog.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/filters/sanitize.js",
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/controllers/profile.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"",
+			"<open folders>",
+			"C:\\Code\\sears-syw\\Sears.Vip.Web\\Views,C:\\Code\\sears-syw\\Sears.Vip.Web\\Content\\assets\\js",
+			"C:\\Code\\sears-syw\\Sears.Vip.Web\\Content\\assets\\js\\lc\\angular",
+			"C:\\Code\\sears-syw\\Sears.Vip.Web\\Views,C:\\Code\\sears-syw\\Sears.Vip.Web\\Content\\assets\\js",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"test1",
+			"req.session.username",
+			"username",
+			"looking_at",
+			"');\n",
+			"PlexService",
+			"authentication.service.js",
+			"14px \"Lucida Grande",
+			"sparzRequest",
+			"     ",
+			"redeem",
+			"amountRequiredForNextLevel",
+			"vip/benefit/",
+			"to keep enjoying",
+			"Max",
+			"polyfill",
+			"assign",
+			"enrollInMax",
+			"timeout",
+			":void",
+			"dateExtended",
+			"benefitQuarterEndDateString",
+			"dateExtended",
+			"currentDate",
+			"debugger",
+			"=>",
+			"Platform",
+			"data-analytics",
+			" ata-analytics",
+			" data-analytics",
+			"message-center",
+			"vacation",
+			"vacations",
+			"dialog_scripts",
+			"dialog",
+			"dialogIsClosed",
+			"getBenefit",
+			"}\n",
+			"setDialogIsClosed",
+			"setCurentOfferCode",
+			"getCurrentOfferCode",
+			"getDialogIsClosed",
+			"vipOnly",
+			"setDialogIsClosed",
+			"sywDialogService.Platform.Events.subscribe",
+			"getChoiceBenefits",
+			"getBonusDeals",
+			"deal-row",
+			"templateCache",
+			"vip-only.js",
+			"bonus-and-deals",
+			"root.bonus-and-deals",
+			"=== 'root.",
+			".state",
+			"tab-anchor-scroll",
+			"VipBonusDeals",
+			"vs.",
+			"{\n",
+			"debugger",
+			"assign",
+			"ui-sref",
+			"section-return-link",
+			"debugger;",
+			"tl(",
+			"LinkType",
+			"EXIT",
+			"trackAction",
+			"how close you are to reaching",
+			"the more you save",
+			"The mroe you shop",
+			"the more you shop",
+			"silverInfo",
+			"maxStatus",
+			"debugger",
+			"debugger;",
+			"redeemCtaText",
+			"debugger",
+			"benefitChoicesRemaining",
+			"debugger",
+			"benefitChoicesRemaining",
+			"You have",
+			"you have",
+			"processOfferModelReturnData",
+			"fetchOfferModel",
+			"Sign in",
+			"click=\"signIn(",
+			"debugger;",
+			"sywDialogService",
+			"currentOfferCode",
+			"redeem",
+			"dialog.js",
+			"linky",
+			"debugger;",
+			"| linky",
+			"| currency",
+			"you can expect to earn",
+			"Next level",
+			"Next Level",
+			"details",
+			"expiresIn",
+			"vipStatus.isInHaloYear",
+			"sref",
+			"IsAuthenticated",
+			".AuthToken",
+			"vipStatus.IsHaloVip",
+			"numberOfPurchasesLeft",
+			"from acheiving VIP",
+			"user.",
+			"user.FirstName",
+			"maxStatus.IsExpiredAnnualMember",
+			"maxStatus.IsCancelledAnnualMember",
+			"maxStatus.IsTrialEligible",
+			"maxStatus.IsAnnual",
+			"maxStatus.IsCancelled",
+			"maxStatus.IsExpired",
+			"maxStatus.IsPreview",
+			"maxStatus.IsHighActivity",
+			"vipStatus.TotalAmount",
+			"vipStatus.Amount",
+			"vipStatus.NumberOfPurchases",
+			"vipStatus.IsNextVip",
+			"vipStatus.NextVipLevel",
+			"vipStatus.AmountRequired",
+			"vipStatus.IsNextPlatinum",
+			"vipStatus.IsNextGold",
+			"vipStatus.NumberOfPurchasesRequired",
+			"vipStatus.TotalAmountRequired",
+			"vipStatus.IsPlatinum"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\t",
+			"",
+			"vipStatus.inHaloYear",
+			"vipStatus.isHaloVip",
+			"user.firstName",
+			"maxStatus.isExpiredAnnualMember",
+			"maxStatus.isCancelledAnnualMember",
+			"maxStatus.isTrialEligible",
+			"maxStatus.isAnnual",
+			"maxStatus.isCancelled",
+			"maxStatus.isExpired",
+			"maxStatus.isPreview",
+			"maxStatus.isHighActivity",
+			"vipStatus.totalAmount",
+			"vipStatus.amount",
+			"vipStatus.numberOfPurchases",
+			"vipStatus.isNextVip",
+			"vipStatus.nextVipLevel",
+			"vipStatus.amountRequired",
+			"vipStatus.isNextPlatinum",
+			"vipStatus.isNextGold",
+			"vipStatus.numberOfPurchasesRequired",
+			"vipStatus.totalAmountRequired",
+			"vipStatus.isPlatinum",
+			"vipStatus.isGold",
+			"vipStatus.isSilver",
+			"vipStatus.currentLevelString",
+			"vipStatus.currentVipLevel",
+			"vipStatus.isVip",
+			"root",
+			"vip"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "routes/apis/requests.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2037,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								994,
+								994
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 445.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "SparzRequest.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 1331.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

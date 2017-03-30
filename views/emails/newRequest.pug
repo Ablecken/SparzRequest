@@ -1,0 +1,17 @@
+html
+  head
+    meta(http-equiv = 'Content-Type', content = 'text/html; charset=UTF-8')
+    title= subject
+    body
+      h3 A new request has been made
+      |You have requested the following:
+      p
+        span <b>Name:</b> #{item.name}
+        br
+        span <b>Year:</b> #{item.year}
+        br
+        span <b>Type:</b> #{item.requestType}
+        br
+        span <b>Ongoing:</b> #{item.isOngoing}
+      p
+        |You will recieve another email when this request has been completed
