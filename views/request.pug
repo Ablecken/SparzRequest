@@ -11,7 +11,7 @@ block content
 						input(type='text', class='form-control', data-ng-model='name')
 					div(class='col-sm-12 col-md-6 col-lg-3 form-group')
 						label Type
-						input(type='text', class='form-control', data-ng-model='requestType')
+						select(class='form-control', data-ng-model='requestType', data-ng-options='s.value as s.text for s in requestTypes')
 					div(class='col-sm-12 col-md-6 col-lg-3 form-group')
 						label Year
 						input(type='text', class='form-control', data-ng-model='year')
@@ -57,3 +57,5 @@ block content
 									button(type='button', data-ng-disabled='rowform.$waiting', data-ng-click='rowform.$cancel()', class='btn btn-danger') Cancel
 								button(class='btn btn-default', data-ng-show='!rowform.$visible', data-ng-click='rowform.$show()') Edit
 								button(class='btn btn-danger', data-ng-show='!rowform.$visible', data-confirm-click='Are you sure you want to delete {{request.name}}?' data-confirmed-click='deleteRequest(request)') Delete
+		div
+			small Emails are sent from justin@sparzington.com.  Add this to your contacts to prevent them from going into your SPAM folder.

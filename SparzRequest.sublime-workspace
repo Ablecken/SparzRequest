@@ -172,11 +172,11 @@
 	"buffers":
 	[
 		{
-			"file": "routes/apis/requests.js",
+			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 2037,
-				"line_ending": "Windows"
+				"buffer_size": 890,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -237,19 +237,16 @@
 	"expanded_folders":
 	[
 		"/C/Code/SparzRequest",
-		"/C/Code/SparzRequest/models",
-		"/C/Code/SparzRequest/routes",
-		"/C/Code/SparzRequest/routes/apis",
-		"/C/Code/SparzRequest/services",
+		"/C/Code/SparzRequest/public",
 		"/C/Code/SparzRequest/views"
 	],
 	"file_history":
 	[
+		"/C/Code/SparzRequest/views/request.pug",
+		"/C/Code/SparzRequest/routes/apis/requests.js",
 		"/C/Code/SparzRequest/infrastructure/emailer.js",
 		"/C/Code/SparzRequest/public/javascripts/src/controllers/login.controller.js",
 		"/C/Code/SparzRequest/public/javascripts/src/controllers/request.controller.js",
-		"/C/Code/SparzRequest/routes/apis/requests.js",
-		"/C/Code/SparzRequest/views/request.pug",
 		"/C/Code/SparzRequest/public/javascripts/src/angular-app.js",
 		"/C/Code/SparzRequest/public/javascripts/src/main.js",
 		"/C/Code/SparzRequest/package.json",
@@ -577,25 +574,26 @@
 			[
 				{
 					"buffer": 0,
-					"file": "routes/apis/requests.js",
-					"semi_transient": false,
+					"file": "package.json",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 2037,
+						"buffer_size": 890,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								994,
-								994
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
