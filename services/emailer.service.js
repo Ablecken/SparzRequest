@@ -23,6 +23,14 @@ module.exports = {
 			subject: 'A request has been completed',
 			item
 		}, cb || processResult);
+	},
+	sendTest(cb) {
+		app.mailer.send('emails/test', {
+			to: 'ablecken@gmail.com',
+			bcc: '',
+			subject: 'A test email has been requested',
+			undefined
+		}, cb || processResult);
 	}
 };
 	

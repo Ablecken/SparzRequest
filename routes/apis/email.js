@@ -30,4 +30,12 @@ router.get('/new', [app.requireAuthMiddleware, app.requireAdminMiddleware], func
 		});
 	});
 });
+router.get('/test', function(req, res) {
+	emailerService.sendTest(function(err) {
+		return res.json({
+			error: err,
+			item: undefined
+		});
+	});
+});
 module.exports = router;
