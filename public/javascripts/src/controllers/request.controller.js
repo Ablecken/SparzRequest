@@ -5,7 +5,7 @@ angular.module('sparzrequest')
 		$scope.name;
 		$scope.requestType;
 		$scope.year;
-		$scope.isOngoing;
+		$scope.isOngoing = false;
 		$scope.requestTypes = [
 			{ value: 'Unknown', text: 'Unknown' },
 			{ value: 'Movie', text: 'Movie' },
