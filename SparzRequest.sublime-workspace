@@ -172,11 +172,12 @@
 	"buffers":
 	[
 		{
-			"file": "package.json",
+			"file": "public/javascripts/src/controllers/request.controller.js",
 			"settings":
 			{
-				"buffer_size": 890,
-				"line_ending": "Unix"
+				"buffer_size": 1613,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -237,14 +238,27 @@
 	"expanded_folders":
 	[
 		"/C/Code/SparzRequest",
+		"/C/Code/SparzRequest/infrastructure",
 		"/C/Code/SparzRequest/public",
-		"/C/Code/SparzRequest/views"
+		"/C/Code/SparzRequest/public/javascripts",
+		"/C/Code/SparzRequest/public/javascripts/src",
+		"/C/Code/SparzRequest/public/javascripts/src/controllers",
+		"/C/Code/SparzRequest/routes",
+		"/C/Code/SparzRequest/routes/apis",
+		"/C/Code/SparzRequest/services",
+		"/C/Code/SparzRequest/views",
+		"/C/Code/SparzRequest/views/emails"
 	],
 	"file_history":
 	[
+		"/C/Code/SparzRequest/.gitignore",
 		"/C/Code/SparzRequest/views/request.pug",
-		"/C/Code/SparzRequest/routes/apis/requests.js",
+		"/C/Code/SparzRequest/public/javascripts/app.comp.js",
+		"/C/Code/SparzRequest/routes/apis/email.js",
+		"/C/Code/SparzRequest/views/emails/test.pug",
+		"/C/Code/SparzRequest/services/emailer.service.js",
 		"/C/Code/SparzRequest/infrastructure/emailer.js",
+		"/C/Code/SparzRequest/routes/apis/requests.js",
 		"/C/Code/SparzRequest/public/javascripts/src/controllers/login.controller.js",
 		"/C/Code/SparzRequest/public/javascripts/src/controllers/request.controller.js",
 		"/C/Code/SparzRequest/public/javascripts/src/angular-app.js",
@@ -256,8 +270,6 @@
 		"/C/Code/SparzRequest/routes/apis/auth.js",
 		"/C/Code/SparzRequest/public/javascripts/src/services.js",
 		"/C/Code/SparzRequest/views/index.pug",
-		"/C/Code/SparzRequest/services/emailer.service.js",
-		"/C/Code/SparzRequest/routes/apis/email.js",
 		"/C/Code/SparzRequest/views/emails/completeRequest.pug",
 		"/C/Code/SparzRequest/infrastructure/routes.js",
 		"/C/Code/SparzRequest/views/emails/newRequest.pug",
@@ -266,7 +278,6 @@
 		"/C/Code/SparzRequest/models/Request.js",
 		"/C/Code/SparzRequest/infrastructure/middleware.js",
 		"/C/Code/SparzRequest/node_modules/cookie-parser/index.js",
-		"/C/Code/SparzRequest/public/javascripts/app.comp.js",
 		"/C/Code/SparzRequest/public/javascripts/src/services/request.service.js",
 		"/C/Code/SparzRequest/public/javascripts/src/services/plex.service.js",
 		"/C/Code/SparzRequest/public/javascripts/src/services/test.service.js",
@@ -367,9 +378,7 @@
 		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_NoVipFooter.cshtml",
 		"/C/Code/sears-syw/Sears.Vip.Web/Views/Dialog/Details.cshtml",
 		"/C/Code/sears-syw/Sears.Vip.Web/Views/Dialog/Confirm.cshtml",
-		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/dialog.js",
-		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/filters/sanitize.js",
-		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/vip/controllers/profile.js"
+		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/dialog.js"
 	],
 	"find":
 	{
@@ -393,6 +402,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"function noop",
+			"noop",
 			"test1",
 			"req.session.username",
 			"username",
@@ -518,9 +529,7 @@
 			"vipStatus.AmountRequired",
 			"vipStatus.IsNextPlatinum",
 			"vipStatus.IsNextGold",
-			"vipStatus.NumberOfPurchasesRequired",
-			"vipStatus.TotalAmountRequired",
-			"vipStatus.IsPlatinum"
+			"vipStatus.NumberOfPurchasesRequired"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -574,26 +583,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "package.json",
-					"semi_transient": true,
+					"file": "public/javascripts/src/controllers/request.controller.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 890,
+						"buffer_size": 1613,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1011,
+								1011
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

@@ -18,9 +18,9 @@ angular.module('sparzrequest')
 			{ value: 'Requested', text: 'Requested' },
 			{ value: 'Downloading', text: 'Downloading' },
 			{ value: 'Completed', text: 'Completed' },
-			{ value: 'NotFound', text: 'NotFound' },
-			{ value: 'OnHold', text: 'OnHold' },
-			{ value: 'AlreadyAvailable', text: 'AlreadyAvailable' }
+			{ value: 'NotFound', text: 'Not Found' },
+			{ value: 'OnHold', text: 'On Hold' },
+			{ value: 'AlreadyAvailable', text: 'Already Available' }
 		];
 
 		RequestService.get(true)
@@ -33,7 +33,7 @@ angular.module('sparzrequest')
 				.then(function(ret) {
 
 				}, function(err) {
-
+					
 				});
 		};
 
