@@ -31,6 +31,7 @@ router.post('/', app.requireAuthMiddleware, function(req, res, next) {
 	req.body.dateClosed = undefined;
 	Request.create(req.body, function(err, item) {
 		if (err) return next(err);
+		console.log('ERR:' + err);
 		emailerService.sendNewRequest(item, req.session.auth.email);
 		return res.json(item);
 	});
