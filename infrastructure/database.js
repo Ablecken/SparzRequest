@@ -4,5 +4,5 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 // connect to MongoDB
 mongoose.connect('mongodb://127.0.0.1/sparz-request-db')
-	.then(() => console.log('Connection to sparz-request-db successful'))
+	.then(() => console.log('Connection to sparz-request-db successful on 127.0.0.1'))
 	.catch((err) => console.error(err));
