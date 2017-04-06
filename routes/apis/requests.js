@@ -7,7 +7,7 @@ const emailerService = require('../../services/emailer.service.js');
 /* GET listing. */
 router.get('/', app.requireAuthMiddleware, function(req, res, next) {	
 	let dbQuery = Request.find({});
-	if (req.session.auth.isAdmin) {
+	if (!req.session.auth.isAdmin) {
 		dbQuery = dbQuery.where('requestedBy').equals(req.session.auth.userName.toLowerCase());
 	}
 	if (!req.query.includeClosed) {
@@ -29,9 +29,9 @@ router.get('/:id', app.requireAuthMiddleware, function(req, res, next) {
 /* POST */
 router.post('/', app.requireAuthMiddleware, function(req, res, next) {
 	req.body.dateClosed = undefined;
+	req.body.requestedBy = req.session.auth.userName.toLowerCase();
 	Request.create(req.body, function(err, item) {
 		if (err) return next(err);
-		console.log('ERR:' + err);
 		emailerService.sendNewRequest(item, req.session.auth.email);
 		return res.json(item);
 	});

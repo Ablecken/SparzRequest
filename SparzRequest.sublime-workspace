@@ -172,10 +172,21 @@
 	"buffers":
 	[
 		{
-			"file": "public/javascripts/src/controllers/request.controller.js",
+			"contents": "const express = require('express');\nconst router = express.Router();\nconst Request = require('../../models/Request.js');\nconst app = require('../../app');\nconst emailerService = require('../../services/emailer.service.js');\n\n/* GET listing. */\nrouter.get('/', app.requireAuthMiddleware, function(req, res, next) {\t\n\tlet dbQuery = Request.find({});\n\tif (req.session.auth.isAdmin) {\n\t\tdbQuery = dbQuery.where('requestedBy').equals(req.session.auth.userName.toLowerCase());\n\t}\n\tif (!req.query.includeClosed) {\n\t\tdbQuery = dbQuery.where('dateClosed').equals(null);\n\t}\n\tdbQuery.sort({ dateClosed: 1 })\n\t\t.exec(function(err, items) {\n\t\t\tif (err) return next(err);\n\t\t\treturn res.json(items);\n\t\t});\n});\n/* GET by id */\nrouter.get('/:id', app.requireAuthMiddleware, function(req, res, next) {\n\tRequest.findById(req.params.id, function(err, item) {\n\t\tif (err) return next(err);\n\t\treturn res.json(item);\n\t});\n});\n/* POST */\nrouter.post('/', app.requireAuthMiddleware, function(req, res, next) {\n\treq.body.dateClosed = undefined;\n\tRequest.create(req.body, function(err, item) {\n\t\tif (err) return next(err);\n\t\temailerService.sendNewRequest(item, req.session.auth.email);\n\t\treturn res.json(item);\n\t});\n});\n/* PUT */\nrouter.put('/:id', app.requireAuthMiddleware, function(req, res, next) {\n\tRequest.findById(req.params.id, function(err, item) {\n\t\tif (err) return next(err);\n\t\t// only update status if we are an admin\n\t\tif (!req.session.auth.isAdmin) {\n\t\t\treq.body.statusType = item.statusType;\n\t\t} else if (req.body.statusType === 'NotFound' || req.body.statusType === 'Completed' || req.body.statusType === 'AlreadyAvailable') {\n\t\t\t// if closed, set filled\n\t\t\treq.body.dateClosed = new Date();\n\t\t}\n\n\t\tRequest.findByIdAndUpdate(req.params.id, req.body, { /* return new object */ new: true }, function(err, item) {\n\t\t\tif (err) return next(err);\n\t\t\t// if we are the admin, send\n\t\t\tif (req.session.auth.isAdmin) {\n\t\t\t\temailerService.sendRequestComplete(item, req.session.auth.email);\n\t\t\t}\n\t\t\treturn res.json(item);\n\t\t});\n\t});\t\n});\nmodule.exports = router;",
+			"file": "routes/apis/requests.js",
+			"file_size": 2126,
+			"file_write_time": 131358800046444938,
 			"settings":
 			{
-				"buffer_size": 1613,
+				"buffer_size": 2037,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "infrastructure/database.js",
+			"settings":
+			{
+				"buffer_size": 313,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -245,12 +256,11 @@
 		"/C/Code/SparzRequest/public/javascripts/src/controllers",
 		"/C/Code/SparzRequest/routes",
 		"/C/Code/SparzRequest/routes/apis",
-		"/C/Code/SparzRequest/services",
-		"/C/Code/SparzRequest/views",
-		"/C/Code/SparzRequest/views/emails"
+		"/C/Code/SparzRequest/services"
 	],
 	"file_history":
 	[
+		"/C/Code/SparzRequest/public/javascripts/src/controllers/request.controller.js",
 		"/C/Code/SparzRequest/.gitignore",
 		"/C/Code/SparzRequest/views/request.pug",
 		"/C/Code/SparzRequest/public/javascripts/app.comp.js",
@@ -260,7 +270,6 @@
 		"/C/Code/SparzRequest/infrastructure/emailer.js",
 		"/C/Code/SparzRequest/routes/apis/requests.js",
 		"/C/Code/SparzRequest/public/javascripts/src/controllers/login.controller.js",
-		"/C/Code/SparzRequest/public/javascripts/src/controllers/request.controller.js",
 		"/C/Code/SparzRequest/public/javascripts/src/angular-app.js",
 		"/C/Code/SparzRequest/public/javascripts/src/main.js",
 		"/C/Code/SparzRequest/package.json",
@@ -583,19 +592,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "public/javascripts/src/controllers/request.controller.js",
+					"file": "routes/apis/requests.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1613,
+						"buffer_size": 2037,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1011,
-								1011
+								1552,
+								1552
 							]
 						],
 						"settings":
@@ -608,6 +617,34 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "infrastructure/database.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 313,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								313
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
