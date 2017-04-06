@@ -58,4 +58,17 @@ router.put('/:id', app.requireAuthMiddleware, function(req, res, next) {
 		});
 	});	
 });
+/* DELETE */
+router.delete('/:id', app.requireAuthMiddleware, function(req, res, next) {
+	Request.findById(req.params.id, function(err, item) {
+		if (err) return next(err);
+		// only allow delete if admin or if owner
+		if (req.session.auth.isAdmin || item.requestedBy === req.session.auth.userName.toLowerCase()) {
+			Request.findByIdAndRemove(req.params.id, function(err, item) {
+				if (err) return next(err);
+				return res.json(item);
+			});
+		}
+	});
+});
 module.exports = router;
