@@ -56,10 +56,10 @@ angular.module('sparzrequest')
 		$scope.deleteRequest = function(request) {
 			RequestService.delete(request._id)
 				.then(function() {
-					const item = $scope.requests.filter(function(element) {
-						return (element._id === request._id);
-					});
-					$scope.requests.splice($scope.requests.indexOf(item), 1);
+					RequestService.get(true)
+						.then(function(ret) {
+							$scope.requests = ret;
+						}, angular.noop);
 				}, angular.noop);
 		};
 

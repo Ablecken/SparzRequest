@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"Request",
+				"RequestService"
+			],
+			[
+				"find",
+				"findById"
+			],
+			[
+				"requ",
+				"requireAuthMiddleware"
+			],
+			[
 				"statu",
 				"statusType"
 			],
@@ -42,10 +54,6 @@
 			[
 				"auth",
 				"authHeaderVal"
-			],
-			[
-				"requ",
-				"requestTypes"
 			],
 			[
 				"Dialo",
@@ -172,22 +180,36 @@
 	"buffers":
 	[
 		{
-			"contents": "const express = require('express');\nconst router = express.Router();\nconst Request = require('../../models/Request.js');\nconst app = require('../../app');\nconst emailerService = require('../../services/emailer.service.js');\n\n/* GET listing. */\nrouter.get('/', app.requireAuthMiddleware, function(req, res, next) {\t\n\tlet dbQuery = Request.find({});\n\tif (req.session.auth.isAdmin) {\n\t\tdbQuery = dbQuery.where('requestedBy').equals(req.session.auth.userName.toLowerCase());\n\t}\n\tif (!req.query.includeClosed) {\n\t\tdbQuery = dbQuery.where('dateClosed').equals(null);\n\t}\n\tdbQuery.sort({ dateClosed: 1 })\n\t\t.exec(function(err, items) {\n\t\t\tif (err) return next(err);\n\t\t\treturn res.json(items);\n\t\t});\n});\n/* GET by id */\nrouter.get('/:id', app.requireAuthMiddleware, function(req, res, next) {\n\tRequest.findById(req.params.id, function(err, item) {\n\t\tif (err) return next(err);\n\t\treturn res.json(item);\n\t});\n});\n/* POST */\nrouter.post('/', app.requireAuthMiddleware, function(req, res, next) {\n\treq.body.dateClosed = undefined;\n\tRequest.create(req.body, function(err, item) {\n\t\tif (err) return next(err);\n\t\temailerService.sendNewRequest(item, req.session.auth.email);\n\t\treturn res.json(item);\n\t});\n});\n/* PUT */\nrouter.put('/:id', app.requireAuthMiddleware, function(req, res, next) {\n\tRequest.findById(req.params.id, function(err, item) {\n\t\tif (err) return next(err);\n\t\t// only update status if we are an admin\n\t\tif (!req.session.auth.isAdmin) {\n\t\t\treq.body.statusType = item.statusType;\n\t\t} else if (req.body.statusType === 'NotFound' || req.body.statusType === 'Completed' || req.body.statusType === 'AlreadyAvailable') {\n\t\t\t// if closed, set filled\n\t\t\treq.body.dateClosed = new Date();\n\t\t}\n\n\t\tRequest.findByIdAndUpdate(req.params.id, req.body, { /* return new object */ new: true }, function(err, item) {\n\t\t\tif (err) return next(err);\n\t\t\t// if we are the admin, send\n\t\t\tif (req.session.auth.isAdmin) {\n\t\t\t\temailerService.sendRequestComplete(item, req.session.auth.email);\n\t\t\t}\n\t\t\treturn res.json(item);\n\t\t});\n\t});\t\n});\nmodule.exports = router;",
 			"file": "routes/apis/requests.js",
-			"file_size": 2126,
-			"file_write_time": 131358800046444938,
 			"settings":
 			{
-				"buffer_size": 2037,
+				"buffer_size": 2562,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "infrastructure/database.js",
+			"file": "public/javascripts/src/controllers/request.controller.js",
 			"settings":
 			{
-				"buffer_size": 313,
+				"buffer_size": 1877,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/request.pug",
+			"settings":
+			{
+				"buffer_size": 3159,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/javascripts/src/services.js",
+			"settings":
+			{
+				"buffer_size": 1387,
 				"line_ending": "Windows"
 			}
 		}
@@ -250,16 +272,22 @@
 	[
 		"/C/Code/SparzRequest",
 		"/C/Code/SparzRequest/infrastructure",
+		"/C/Code/SparzRequest/models",
 		"/C/Code/SparzRequest/public",
 		"/C/Code/SparzRequest/public/javascripts",
 		"/C/Code/SparzRequest/public/javascripts/src",
 		"/C/Code/SparzRequest/public/javascripts/src/controllers",
 		"/C/Code/SparzRequest/routes",
 		"/C/Code/SparzRequest/routes/apis",
-		"/C/Code/SparzRequest/services"
+		"/C/Code/SparzRequest/services",
+		"/C/Code/SparzRequest/views"
 	],
 	"file_history":
 	[
+		"/C/Code/SparzRequest/public/javascripts/src/services.js",
+		"/C/Code/SparzRequest/models/Request.js",
+		"/C/Code/SparzRequest/infrastructure/database.js",
+		"/C/Code/SparzRequest/routes/apis/requests.js",
 		"/C/Code/SparzRequest/public/javascripts/src/controllers/request.controller.js",
 		"/C/Code/SparzRequest/.gitignore",
 		"/C/Code/SparzRequest/views/request.pug",
@@ -268,7 +296,6 @@
 		"/C/Code/SparzRequest/views/emails/test.pug",
 		"/C/Code/SparzRequest/services/emailer.service.js",
 		"/C/Code/SparzRequest/infrastructure/emailer.js",
-		"/C/Code/SparzRequest/routes/apis/requests.js",
 		"/C/Code/SparzRequest/public/javascripts/src/controllers/login.controller.js",
 		"/C/Code/SparzRequest/public/javascripts/src/angular-app.js",
 		"/C/Code/SparzRequest/public/javascripts/src/main.js",
@@ -277,14 +304,12 @@
 		"/C/Code/SparzRequest/public/stylesheets/site.css",
 		"/C/Code/SparzRequest/app.js",
 		"/C/Code/SparzRequest/routes/apis/auth.js",
-		"/C/Code/SparzRequest/public/javascripts/src/services.js",
 		"/C/Code/SparzRequest/views/index.pug",
 		"/C/Code/SparzRequest/views/emails/completeRequest.pug",
 		"/C/Code/SparzRequest/infrastructure/routes.js",
 		"/C/Code/SparzRequest/views/emails/newRequest.pug",
 		"/C/Code/SparzRequest/routes/pages/index.js",
 		"/C/Code/SparzRequest/routes/pages/request.js",
-		"/C/Code/SparzRequest/models/Request.js",
 		"/C/Code/SparzRequest/infrastructure/middleware.js",
 		"/C/Code/SparzRequest/node_modules/cookie-parser/index.js",
 		"/C/Code/SparzRequest/public/javascripts/src/services/request.service.js",
@@ -296,7 +321,6 @@
 		"/C/Code/SparzRequest/nodemon.json",
 		"/C/Code/SparzRequest/public/stylesheets/src/main.css",
 		"/C/Code/SparzRequest/public/stylesheets/style.css",
-		"/C/Code/SparzRequest/infrastructure/database.js",
 		"/C/Code/SparzRequest/infrastructure/errors.js",
 		"/C/Code/SparzRequest/routes.js",
 		"/C/Code/SparzRequest/errors.js",
@@ -596,15 +620,102 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2037,
+						"buffer_size": 2562,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1552,
-								1552
+								1647,
+								1648
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/javascripts/src/controllers/request.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1877,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1751,
+								1751
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/request.pug",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1708,
+								1708
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/javascripts/src/services.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1387,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -616,35 +727,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "infrastructure/database.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 313,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								313,
-								313
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
