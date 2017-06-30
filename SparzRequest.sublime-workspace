@@ -180,36 +180,10 @@
 	"buffers":
 	[
 		{
-			"file": "routes/apis/requests.js",
+			"file": "views/emails/newRequest.pug",
 			"settings":
 			{
-				"buffer_size": 2562,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/javascripts/src/controllers/request.controller.js",
-			"settings":
-			{
-				"buffer_size": 1877,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/request.pug",
-			"settings":
-			{
-				"buffer_size": 3159,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/javascripts/src/services.js",
-			"settings":
-			{
-				"buffer_size": 1387,
+				"buffer_size": 490,
 				"line_ending": "Windows"
 			}
 		}
@@ -270,27 +244,19 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Code/SparzRequest",
-		"/C/Code/SparzRequest/infrastructure",
-		"/C/Code/SparzRequest/models",
-		"/C/Code/SparzRequest/public",
-		"/C/Code/SparzRequest/public/javascripts",
-		"/C/Code/SparzRequest/public/javascripts/src",
-		"/C/Code/SparzRequest/public/javascripts/src/controllers",
-		"/C/Code/SparzRequest/routes",
-		"/C/Code/SparzRequest/routes/apis",
-		"/C/Code/SparzRequest/services",
-		"/C/Code/SparzRequest/views"
+		"/C/Code/SparzRequest/views",
+		"/C/Code/SparzRequest/views/emails"
 	],
 	"file_history":
 	[
+		"/C/Code/SparzRequest/app.js",
+		"/C/Code/SparzRequest/routes/apis/requests.js",
+		"/C/Code/SparzRequest/public/javascripts/src/controllers/request.controller.js",
+		"/C/Code/SparzRequest/views/request.pug",
 		"/C/Code/SparzRequest/public/javascripts/src/services.js",
 		"/C/Code/SparzRequest/models/Request.js",
 		"/C/Code/SparzRequest/infrastructure/database.js",
-		"/C/Code/SparzRequest/routes/apis/requests.js",
-		"/C/Code/SparzRequest/public/javascripts/src/controllers/request.controller.js",
 		"/C/Code/SparzRequest/.gitignore",
-		"/C/Code/SparzRequest/views/request.pug",
 		"/C/Code/SparzRequest/public/javascripts/app.comp.js",
 		"/C/Code/SparzRequest/routes/apis/email.js",
 		"/C/Code/SparzRequest/views/emails/test.pug",
@@ -302,7 +268,6 @@
 		"/C/Code/SparzRequest/package.json",
 		"/C/Code/SparzRequest/views/layout.pug",
 		"/C/Code/SparzRequest/public/stylesheets/site.css",
-		"/C/Code/SparzRequest/app.js",
 		"/C/Code/SparzRequest/routes/apis/auth.js",
 		"/C/Code/SparzRequest/views/index.pug",
 		"/C/Code/SparzRequest/views/emails/completeRequest.pug",
@@ -616,118 +581,32 @@
 			[
 				{
 					"buffer": 0,
-					"file": "routes/apis/requests.js",
+					"file": "views/emails/newRequest.pug",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2562,
+						"buffer_size": 490,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1647,
-								1648
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "public/javascripts/src/controllers/request.controller.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1877,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1751,
-								1751
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "views/request.pug",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3159,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1708,
-								1708
+								490,
+								490
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/javascripts/src/services.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1387,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

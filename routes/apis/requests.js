@@ -30,6 +30,7 @@ router.get('/:id', app.requireAuthMiddleware, function(req, res, next) {
 router.post('/', app.requireAuthMiddleware, function(req, res, next) {
 	req.body.dateClosed = undefined;
 	req.body.requestedBy = req.session.auth.userName.toLowerCase();
+	req.body.requestedByEmail = req.session.auth.email.toLowerCase();
 	Request.create(req.body, function(err, item) {
 		if (err) return next(err);
 		emailerService.sendNewRequest(item, req.session.auth.email);
@@ -52,7 +53,7 @@ router.put('/:id', app.requireAuthMiddleware, function(req, res, next) {
 			if (err) return next(err);
 			// if we are the admin, send
 			if (req.session.auth.isAdmin) {
-				emailerService.sendRequestComplete(item, req.session.auth.email);
+				emailerService.sendRequestComplete(item);
 			}
 			return res.json(item);
 		});

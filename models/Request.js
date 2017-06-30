@@ -10,6 +10,7 @@ const requestSchema = new mongoose.Schema({
 		type: String,
 		index: true
 	},
+	requestedByEmail: String,
 	name: String,
 	year: Number,
 	isOngoing: Boolean,

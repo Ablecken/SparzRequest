@@ -16,9 +16,17 @@ module.exports = {
 			item
 		}, cb || processResult);
 	},
-	sendRequestComplete(item, to, cb) {
+	sendRequestComplete(item, cb) {
+		if (!item.requestedByEmail || item.requestedByEmail.length <= 0) {
+			if (cb) {
+				cb();
+			} else {
+				processResult();
+			}
+		}
+		
 		app.mailer.send('emails/completeRequest', {
-			to,
+			to: item.requestedByEmail,
 			bcc,
 			subject: 'A request has been completed',
 			item
