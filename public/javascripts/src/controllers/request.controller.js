@@ -6,6 +6,7 @@ angular.module('sparzrequest')
 		$scope.requestType;
 		$scope.year;
 		$scope.isOngoing = false;
+		$scope.showClosed = false;
 		$scope.requestTypes = [
 			{ value: 'Unknown', text: 'Unknown' },
 			{ value: 'Movie', text: 'Movie' },
@@ -23,10 +24,12 @@ angular.module('sparzrequest')
 			{ value: 'AlreadyAvailable', text: 'Already Available' }
 		];
 
-		RequestService.get(true)
-			.then(function(ret) {
-				$scope.requests = ret;
-			}, angular.noop);
+		$scope.refresh = function() {
+			RequestService.get($scope.showClosed)
+				.then(function(ret) {
+					$scope.requests = ret;
+				}, angular.noop);			
+		};
 
 		$scope.saveRequest = function(request, id) {
 			RequestService.save(request, id)
@@ -54,6 +57,10 @@ angular.module('sparzrequest')
 			$scope.requestedBy = '';
 		};
 
+		$scope.isMarkedComplete = function(request) {
+			return request.statusType === 'Completed' || request.statusType === 'NotFound' || request.statusType === 'AlreadyAvailable';
+		};
+
 		$scope.deleteRequest = function(request) {
 			RequestService.delete(request._id)
 				.then(function() {
@@ -70,4 +77,5 @@ angular.module('sparzrequest')
 		};
 
 		$rootScope.loading = false;
+		$scope.refresh();
 	});

@@ -25,6 +25,9 @@ block content
 						button(class='btn btn-success', data-ng-click='clearRequest()') Clear
 		hr
 		div
+			div(style='margin-bottom: 5px;')
+				input(type='checkbox', data-ng-model='showClosed', data-ng-change='refresh()') 
+				|&nbsp;Show Closed
 			table(class='table table-bordered table-responsive table-striped table-condensed')
 				thead
 					tr
@@ -38,7 +41,7 @@ block content
 						th Actions
 					thead
 					tbody
-						tr(data-ng-cloak, data-ng-repeat='request in requests')
+						tr(data-ng-cloak, data-ng-class='{ completed: isMarkedComplete(request) }', data-ng-repeat='request in requests')
 							td(data-ng-show='isAdmin()') {{ request.requestedBy }}
 							td
 								span(e-form='rowform', editable-text='request.name', e-name='name') {{request.name || 'empty'}}

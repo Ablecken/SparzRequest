@@ -18,6 +18,10 @@ a {
 	padding-bottom: 150px;
 }
 
+tr.completed { 
+	background-color: #FFCCCB !important;
+}
+
 .footer {
 	position: relative;
 	margin-top: -150px; /* negative value of footer height */

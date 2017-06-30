@@ -13,7 +13,7 @@ router.get('/', app.requireAuthMiddleware, function(req, res, next) {
 	if (!req.query.includeClosed) {
 		dbQuery = dbQuery.where('dateClosed').equals(null);
 	}
-	dbQuery.sort({ dateClosed: 1 })
+	dbQuery.sort({ dateClosed: 1, dateRequested: 1 })
 		.exec(function(err, items) {
 			if (err) return next(err);
 			return res.json(items);
