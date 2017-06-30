@@ -1,6 +1,6 @@
 const angular = require('angular');
 angular.module('sparzrequest')
-	.controller('requestController', function($rootScope, $scope, $window, config, RequestService) {
+	.controller('requestController', function($rootScope, $scope, $window, $cookies, config, RequestService) {
 		$scope.requests = [];
 		$scope.name;
 		$scope.requestType;
@@ -30,11 +30,7 @@ angular.module('sparzrequest')
 
 		$scope.saveRequest = function(request, id) {
 			RequestService.save(request, id)
-				.then(function(ret) {
-
-				}, function(err) {
-					
-				});
+				.then(angular.noop(), angular.noop());
 		};
 
 		$scope.createRequest = function() {
@@ -43,6 +39,11 @@ angular.module('sparzrequest')
 					$scope.requests.push(ret);
 				}, angular.noop)
 				.then($scope.clearRequest);
+		};
+
+		$scope.complete = function(request) {
+			request.statusType = 'Completed';
+			$scope.saveRequest(request, request._id);
 		};
 
 		$scope.clearRequest = function() {
@@ -61,6 +62,11 @@ angular.module('sparzrequest')
 							$scope.requests = ret;
 						}, angular.noop);
 				}, angular.noop);
+		};
+
+		$scope.isAdmin = function() {
+			const auth = JSON.parse($cookies.get(config.authCookie));
+			return auth.isAdmin;
 		};
 
 		$rootScope.loading = false;
