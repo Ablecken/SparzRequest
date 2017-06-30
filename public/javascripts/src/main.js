@@ -15,7 +15,7 @@ angular.module('sparzrequest', ['xeditable', 'ngCookies'])
 	})
 	.run(function($rootScope, $cookies, config, editableOptions) {
 		editableOptions.theme = 'bs3';
-		$rootScope.version = '0.1.0';
+		$rootScope.version = '0.2.0';
 		$rootScope.madeWith = '';
 		$rootScope.loading = true;
 

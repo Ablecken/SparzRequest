@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"Alread",
+				"AlreadyAvailable"
+			],
+			[
+				"No",
+				"NotFound"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"pro",
+				"processResult"
+			],
+			[
+				"reque",
+				"requestedByEmail"
+			],
+			[
 				"Request",
 				"RequestService"
 			],
@@ -30,10 +50,6 @@
 			[
 				"emailer",
 				"emailerService"
-			],
-			[
-				"pro",
-				"processError"
 			],
 			[
 				"us",
@@ -179,14 +195,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "views/emails/newRequest.pug",
-			"settings":
-			{
-				"buffer_size": 490,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -244,35 +252,46 @@
 	},
 	"expanded_folders":
 	[
+		"/C/Code/SparzRequest",
+		"/C/Code/SparzRequest/models",
+		"/C/Code/SparzRequest/public",
+		"/C/Code/SparzRequest/public/javascripts",
+		"/C/Code/SparzRequest/public/javascripts/src",
+		"/C/Code/SparzRequest/public/javascripts/src/controllers",
+		"/C/Code/SparzRequest/public/stylesheets",
+		"/C/Code/SparzRequest/routes",
+		"/C/Code/SparzRequest/routes/apis",
+		"/C/Code/SparzRequest/services",
 		"/C/Code/SparzRequest/views",
 		"/C/Code/SparzRequest/views/emails"
 	],
 	"file_history":
 	[
-		"/C/Code/SparzRequest/app.js",
-		"/C/Code/SparzRequest/routes/apis/requests.js",
-		"/C/Code/SparzRequest/public/javascripts/src/controllers/request.controller.js",
+		"/C/Code/SparzRequest/public/javascripts/src/controllers/login.controller.js",
 		"/C/Code/SparzRequest/views/request.pug",
-		"/C/Code/SparzRequest/public/javascripts/src/services.js",
+		"/C/Code/SparzRequest/public/javascripts/src/main.js",
+		"/C/Code/SparzRequest/routes/apis/requests.js",
+		"/C/Code/SparzRequest/public/stylesheets/site.css",
+		"/C/Code/SparzRequest/public/javascripts/src/controllers/request.controller.js",
 		"/C/Code/SparzRequest/models/Request.js",
+		"/C/Code/SparzRequest/routes/apis/auth.js",
+		"/C/Code/SparzRequest/views/index.pug",
+		"/C/Code/SparzRequest/services/emailer.service.js",
+		"/C/Code/SparzRequest/routes/apis/email.js",
+		"/C/Code/SparzRequest/README.md",
+		"/C/Code/SparzRequest/views/emails/newRequest.pug",
+		"/C/Code/SparzRequest/app.js",
+		"/C/Code/SparzRequest/public/javascripts/src/services.js",
 		"/C/Code/SparzRequest/infrastructure/database.js",
 		"/C/Code/SparzRequest/.gitignore",
 		"/C/Code/SparzRequest/public/javascripts/app.comp.js",
-		"/C/Code/SparzRequest/routes/apis/email.js",
 		"/C/Code/SparzRequest/views/emails/test.pug",
-		"/C/Code/SparzRequest/services/emailer.service.js",
 		"/C/Code/SparzRequest/infrastructure/emailer.js",
-		"/C/Code/SparzRequest/public/javascripts/src/controllers/login.controller.js",
 		"/C/Code/SparzRequest/public/javascripts/src/angular-app.js",
-		"/C/Code/SparzRequest/public/javascripts/src/main.js",
 		"/C/Code/SparzRequest/package.json",
 		"/C/Code/SparzRequest/views/layout.pug",
-		"/C/Code/SparzRequest/public/stylesheets/site.css",
-		"/C/Code/SparzRequest/routes/apis/auth.js",
-		"/C/Code/SparzRequest/views/index.pug",
 		"/C/Code/SparzRequest/views/emails/completeRequest.pug",
 		"/C/Code/SparzRequest/infrastructure/routes.js",
-		"/C/Code/SparzRequest/views/emails/newRequest.pug",
 		"/C/Code/SparzRequest/routes/pages/index.js",
 		"/C/Code/SparzRequest/routes/pages/request.js",
 		"/C/Code/SparzRequest/infrastructure/middleware.js",
@@ -375,8 +394,7 @@
 		"/C/Users/jgeiger/AppData/Roaming/Sublime Text 3/Packages/ESLint-Formatter/ESLint-Formatter.sublime-settings",
 		"/C/Code/sears-syw/Sears.Vip.Web/Views/Landing/Includes/_NoVipFooter.cshtml",
 		"/C/Code/sears-syw/Sears.Vip.Web/Views/Dialog/Details.cshtml",
-		"/C/Code/sears-syw/Sears.Vip.Web/Views/Dialog/Confirm.cshtml",
-		"/C/Code/sears-syw/Sears.Vip.Web/Content/assets/js/dialog.js"
+		"/C/Code/sears-syw/Sears.Vip.Web/Views/Dialog/Confirm.cshtml"
 	],
 	"find":
 	{
@@ -576,39 +594,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "views/emails/newRequest.pug",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 490,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								490,
-								490
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
